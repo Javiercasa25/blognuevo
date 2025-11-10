@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier's Blog | Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <nav>
         <ul>
-
-            <li> <a href ="index.html">Index </a></li> 
-            <li> <a href ="estudios.html">Estudios </a></li> 
-            <li>  <a href ="hobbies.html">Hobbies </a></li> 
-            <li>  <a href ="proyectos.html">Proyectos </a></li> 
-               <li>  <a href ="#">Contactos </a></li>
-
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="proyecto.html">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
         </ul>
-
     </nav>
+
     <main>
-        <h1> Mis Contactos </h1>
+        <section id="contacto">
+            <h1>Mis Contactos</h1>
+            <p>¿Quieres ponerte en contacto conmigo? Completa el formulario o usa mis redes sociales.</p>
 
+            <form action="#" method="post">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
+            <div class="redes">
+                <h2>También puedes encontrarme en:</h2>
+                <ul>
+                    <li><a href="#" target="_blank">🌐 Sitio web personal</a></li>
+                    <li><a href="#" target="_blank">📸 Instagram</a></li>
+                    <li><a href="#" target="_blank">💼 LinkedIn</a></li>
+                    <li><a href="#" target="_blank">🐙 GitHub</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
-
 </body>
 </html>
