@@ -1,0 +1,205 @@
+/* 🎨 ==== ESTILOS GENERALES ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* ==== NAVBAR ==== */
+nav {
+  background-color: #222;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* ==== SECCIÓN BIENVENIDA ==== */
+#Bienvenidos {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+}
+
+#Bienvenidos h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#Bienvenidos p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+#Bienvenidos button {
+  background-color: white;
+  color: #0077b6;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Bienvenidos button:hover {
+  background-color: #00b4d8;
+  color: white;
+}
+
+/* ==== SECCIONES GENERALES ==== */
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #0077b6;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #00b4d8;
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+/* ==== PROYECTOS ==== */
+#ultimos-proyectos {
+  background-color: #ffffff;
+}
+
+#ultimos-proyectos article {
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ultimos-proyectos article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#ultimos-proyectos img {
+  width: 100%;
+  height: auto; /* 🔒 Mantiene dimensiones originales */
+  border-radius: 10px;
+}
+
+#ultimos-proyectos h3 {
+  margin-top: 1rem;
+  color: #222;
+}
+
+#ultimos-proyectos p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+#ultimos-proyectos a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00b4d8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#ultimos-proyectos a:hover {
+  text-decoration: underline;
+}
+
+/* ==== VIAJES ==== */
+#ultimos-viajes {
+  background-color: #f0f9ff;
+}
+
+#ultimos-viajes article {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+#ultimos-viajes article:hover {
+  transform: scale(1.02);
+}
+
+#ultimos-viajes img {
+  width: 100%;
+  height: auto; /* 🔒 No cambia dimensiones originales */
+  border-radius: 10px;
+}
+
+#ultimos-viajes h3,
+#ultimos-viajes h4 {
+  margin-top: 1rem;
+  color: #0077b6;
+}
+
+#ultimos-viajes p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+#ultimos-viajes aside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (min-width: 768px) {
+  #ultimos-proyectos,
+  #ultimos-viajes aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #ultimos-proyectos article,
+  #ultimos-viajes article {
+    flex: 0 0 30%;
+  }
+}
