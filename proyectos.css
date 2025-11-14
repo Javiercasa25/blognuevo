@@ -1,0 +1,167 @@
+/* * 🎨 ==== ESTILOS GENERALES (Consistentes) ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* * ==== NAVBAR (Consistente) ==== */
+nav {
+    background-color: #222;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* * ==== ESTILOS DEL CONTENIDO PRINCIPAL Y TÍTULO H1 (Consistente) ==== */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #0077b6;
+    position: relative;
+}
+
+main h1::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #00b4d8;
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* * ==== CONTENEDOR DE PROYECTOS (Similar a Viajes) ==== */
+#proyectos-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Contenedor del Título + Tarjeta */
+.proyecto-item {
+    width: 300px;
+    text-align: center;
+}
+
+.proyecto-item h2 { /* Usamos H2 para los títulos de proyecto */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #222; /* Color más enfocado en el contenido */
+    font-weight: 600;
+}
+
+/* * ==== FLIP CARD (Adaptado de Estudios/Viajes) ==== */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 340px;
+    perspective: 1000px;
+    border-radius: 14px;
+    margin: 0 auto;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    transition: box-shadow 0.3s ease;
+}
+
+.flip-card:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ==== Caras de la tarjeta ==== */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+/* ==== Frente (Imagen) ==== */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #f2f2f2;
+}
+
+/* ==== Reverso (Párrafo de Descripción) ==== */
+.flip-card-back {
+    transform: rotateY(180deg);
+    /* Fondo con gradiente */
+    background: linear-gradient(to bottom right, #0077b6, #00b4d8); 
+    color: white;
+    padding: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #005f99; 
+}
+
+/* Texto reverso */
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* * ==== RESPONSIVE ==== */
+@media (min-width: 768px) {
+    #proyectos-tarjetas {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 600px) {
+    .flip-card {
+        width: 260px;
+        height: 300px;
+    }
+}

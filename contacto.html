@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier's Blog | Contacto</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="contacto.css"> 
 </head>
 <body>
     <nav>
@@ -19,37 +20,31 @@
 
     <main>
         <section id="contacto">
-            <h1>Mis Contactos</h1>
-            <p>¿Quieres ponerte en contacto conmigo? Completa el formulario o usa mis redes sociales.</p>
+            <h1>Contáctame</h1> <p class="subtitulo">¡Me encantaría saber de ti! Puedes encontrarme y seguirme en mis redes sociales:</p>
 
-            <form action="#" method="post">
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <div class="contenedor-redes-simple"> 
+                
+                <h2>Redes Sociales y Enlaces:</h2>
+                
+                <div class="iconos-redes">
+                    
+                    <a href="https://www.instagram.com/javiercasacaiza?igsh=NHMzdnltMW41MHVq" target="_blank" class="icono-img-link" title="Instagram">
+                        <img src="img/IG.png" alt="Instagram" class="icono-red"> 
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1ABuxQUUNS/" target="_blank" class="icono-img-link" title="Facebook">
+                       <img src="img/fb.png" alt="Facebook" class="icono-red"> 
+                    </a>
+
+                    <a href="https://wa.link/j52b0y" target="_blank" class="icono-img-link" title="WhatsApp">
+                        <img src="img/wh.png" alt="WhatsApp" class="icono-red"> 
+                    </a>
+
                 </div>
-
-                <div class="campo">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                </div>
-
-                <div class="campo">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-                </div>
-
-                <button type="submit">Enviar mensaje</button>
-            </form>
-
-            <div class="redes">
-                <h2>También puedes encontrarme en:</h2>
-                <ul>
-                    <li><a href="#" target="_blank">🌐 Sitio web personal</a></li>
-                    <li><a href="#" target="_blank">📸 Instagram</a></li>
-                    <li><a href="#" target="_blank">💼 LinkedIn</a></li>
-                    <li><a href="#" target="_blank">🐙 GitHub</a></li>
-                </ul>
+                
+                <p class="info-adicional">Para consultas directas, envíame un correo a: **javiercasa@gmail.com**</p>
             </div>
+            
         </section>
     </main>
 </body>

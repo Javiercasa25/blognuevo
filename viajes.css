@@ -1,0 +1,171 @@
+/* * 🎨 ==== ESTILOS GENERALES (Copiados del Código Base) ==== 
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Fuente consistente */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa; /* Fondo consistente */
+}
+
+/* * ==== NAVBAR (Copiado del Código Base) ==== 
+ */
+nav {
+    background-color: #222;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4; /* Color de hover consistente */
+}
+
+/* * ==== ESTILOS DEL CONTENIDO PRINCIPAL Y TÍTULO H1 ==== 
+ */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+main h1 {
+    /* Estilos del h2 de sección para el h1 de la página de viajes */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem; /* Ajuste para un título de página */
+    color: #0077b6; /* Color consistente */
+    position: relative;
+}
+
+main h1::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #00b4d8; /* Color de la línea de acento consistente */
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* * ==== CONTENEDOR DE VIAJES (Adaptación para FLIP CARDS) ==== 
+ */
+#viajes-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; /* Espacio entre los items */
+    padding: 2rem 0;
+}
+
+/* Contenedor del Título + Tarjeta (Necesario para el título externo) */
+.viaje-item {
+    width: 300px; /* Ancho consistente con el flip-card */
+    text-align: center;
+}
+
+.viaje-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333; /* Título de la tarjeta, color más discreto */
+    font-weight: 600;
+}
+
+/* * ==== FLIP CARD (Adaptado del Código Base de Estudios) ==== 
+ */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 340px; /* Altura consistente */
+    perspective: 1000px;
+    border-radius: 14px;
+    margin: 0 auto; /* Centra la tarjeta bajo el título H3 */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ==== Caras de la tarjeta ==== */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
+}
+
+/* ==== Frente (Imagen) ==== */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambiado a 'cover' para que las fotos de viajes se vean completas */
+    padding: 0; /* Quitamos el padding para que la imagen ocupe todo */
+    background: #f2f2f2;
+}
+
+/* ==== Reverso (Párrafo de Descripción) ==== */
+.flip-card-back {
+    transform: rotateY(180deg);
+    /* Usamos colores de acento de tu blog base */
+    background: linear-gradient(to bottom right, #0077b6, #00b4d8); 
+    color: white;
+    padding: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid #005f99; /* Borde oscuro consistente */
+}
+
+/* Solo necesitamos el párrafo en el reverso para Viajes */
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* * ==== RESPONSIVE (Asegura la vista móvil) ==== 
+ */
+@media (min-width: 768px) {
+    /* En pantallas grandes, se muestran en una fila flexible */
+    #viajes-tarjetas {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 600px) {
+    .flip-card {
+        width: 260px;
+        height: 300px;
+    }
+}
