@@ -1,4 +1,4 @@
-/* * 🎨 ==== ESTILOS GENERALES (Consistentes) ==== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,6 @@ body {
     background-color: #fafafa;
 }
 
-/* * ==== NAVBAR (Consistente) ==== */
 nav {
     background-color: #222;
     padding: 1rem 0;
@@ -39,7 +38,6 @@ nav a:hover {
     color: #00bcd4;
 }
 
-/* * ==== SECCIÓN CONTACTO Y TÍTULO H1 (Consistentes) ==== */
 main {
     max-width: 1000px;
     margin: auto;
@@ -70,11 +68,10 @@ main {
 
 .subtitulo {
     font-size: 1.1rem;
-    margin-bottom: 3rem; /* Más espacio después de la descripción */
+    margin-bottom: 3rem; 
     color: #555;
 }
 
-/* * ==== ESTILOS DE REDES SOCIALES (Foco principal) ==== */
 .contenedor-redes-simple {
     max-width: 600px;
     margin: 0 auto;
@@ -93,13 +90,13 @@ main {
 .iconos-redes {
     display: flex;
     justify-content: center;
-    gap: 35px; /* Más espacio entre los iconos */
+    gap: 35px; 
     margin-bottom: 30px;
 }
 
-/* Estilo para los iconos de Font Awesome */
+
 .icono-link {
-    font-size: 3rem; /* Iconos grandes */
+    font-size: 3rem; 
     color: #333;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -109,13 +106,13 @@ main {
     transform: scale(1.1);
 }
 
-/* Estilo para las IMAGENES de redes (tus placeholders) */
+
 .icono-red {
-    width: 50px; /* Tamaño de la imagen consistente con los iconos */
+    width: 50px; 
     height: 50px;
     object-fit: contain;
     transition: transform 0.3s ease;
-    border-radius: 5px; /* Bordes suaves si la imagen es cuadrada */
+    border-radius: 5px; 
 }
 
 .icono-img-link:hover .icono-red {

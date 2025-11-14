@@ -1,4 +1,4 @@
-/* 🎨 ==== ESTILOS GENERALES ==== */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   background-color: #fafafa;
 }
 
-/* ==== NAVBAR ==== */
+
 nav {
   background-color: #222;
   padding: 1rem 0;
@@ -37,7 +37,7 @@ nav a:hover {
   color: #00bcd4;
 }
 
-/* ==== SECCIÓN BIENVENIDA ==== */
+
 #Bienvenidos {
   text-align: center;
   padding: 5rem 2rem;
@@ -73,7 +73,7 @@ nav a:hover {
   color: white;
 }
 
-/* ==== SECCIONES GENERALES ==== */
+
 section {
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -98,7 +98,7 @@ section h2::after {
   border-radius: 2px;
 }
 
-/* ==== PROYECTOS ==== */
+
 #ultimos-proyectos {
   background-color: #ffffff;
 }
@@ -121,7 +121,7 @@ section h2::after {
 
 #ultimos-proyectos img {
   width: 100%;
-  height: auto; /* 🔒 Mantiene dimensiones originales */
+  height: auto; 
   border-radius: 10px;
 }
 
@@ -135,19 +135,6 @@ section h2::after {
   font-size: 0.95rem;
 }
 
-#ultimos-proyectos a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #00b4d8;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-#ultimos-proyectos a:hover {
-  text-decoration: underline;
-}
-
-/* ==== VIAJES ==== */
 #ultimos-viajes {
   background-color: #f0f9ff;
 }
@@ -168,7 +155,7 @@ section h2::after {
 
 #ultimos-viajes img {
   width: 100%;
-  height: auto; /* 🔒 No cambia dimensiones originales */
+  height: auto; 
   border-radius: 10px;
 }
 
@@ -189,7 +176,52 @@ section h2::after {
   justify-content: center;
 }
 
-/* ==== RESPONSIVE ==== */
+
+#ultimos-proyectos article a,
+#ultimos-viajes article a,
+#ultimos-viajes aside article a {
+    
+    display: inline-block; 
+    
+    background-color: transparent; 
+    
+    
+    color: #0077b6; 
+    
+    
+    border: 2px solid #0077b6; 
+    
+    
+    padding: 8px 18px; 
+    
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none; 
+    
+    
+    border-radius: 6px; 
+    
+    
+    transition: all 0.3s ease;
+    
+    
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+}
+
+#ultimos-proyectos article a:hover,
+#ultimos-viajes article a:hover,
+#ultimos-viajes aside article a:hover {
+   
+    background-color: #00b4d8; 
+    
+  
+    color: white; 
+   
+    border-color: #00b4d8;
+}
+
+
 @media (min-width: 768px) {
   #ultimos-proyectos,
   #ultimos-viajes aside {
@@ -203,122 +235,4 @@ section h2::after {
     flex: 0 0 30%;
     
   }
-  
 }
-/* =========================================================
-   🎓 ==== ESTUDIOS — TARJETAS FLIP (EFECTO DAR LA VUELTA) ====
-   ========================================================= */
-
-#estudios-tarjetas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-
-/* =========================================================
-   📌 TARJETA PRINCIPAL (ESC. COLEGIO, UNI)
-   ========================================================= */
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 340px;
-  perspective: 1000px;
-  border-radius: 14px;
-}
-
-/* Tamaño pequeño para cursos */
-.flip-card.mini {
-  width: 220px;
-  height: 260px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.7s ease;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* ==== Caras de la tarjeta ==== */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 14px;
-  overflow: hidden;
-  backface-visibility: hidden;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
-}
-
-/* ==== Frente ==== */
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 10px;
-  background: #f2f2f2;
-}
-
-/* ==== Reverso ==== */
-.flip-card-back {
-  transform: rotateY(180deg);
-  background: linear-gradient(to bottom right, #7b1818, #3d0b0b);
-  color: white;
-  padding: 1.4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 3px solid #5a0f0f;
-}
-
-.flip-card-back h3,
-.flip-card-back h2 {
-  margin-bottom: 0.7rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-/* ==== Texto reverso ==== */
-.flip-card-back p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.flip-card-back ul {
-  margin-top: 0.7rem;
-  text-align: left;
-  font-size: 0.95rem;
-  padding-left: 1.2rem;
-}
-
-.flip-card-back ul li {
-  margin-bottom: 0.4rem;
-}
-
-/* =========================================================
-   📱 RESPONSIVE
-   ========================================================= */
-@media (max-width: 600px) {
-  .flip-card {
-    width: 260px;
-    height: 300px;
-  }
-  .flip-card.mini {
-    width: 180px;
-    height: 220px;
-  }
-}
-
-
