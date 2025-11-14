@@ -201,5 +201,124 @@ section h2::after {
   #ultimos-proyectos article,
   #ultimos-viajes article {
     flex: 0 0 30%;
+    
+  }
+  
+}
+/* =========================================================
+   🎓 ==== ESTUDIOS — TARJETAS FLIP (EFECTO DAR LA VUELTA) ====
+   ========================================================= */
+
+#estudios-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* =========================================================
+   📌 TARJETA PRINCIPAL (ESC. COLEGIO, UNI)
+   ========================================================= */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 340px;
+  perspective: 1000px;
+  border-radius: 14px;
+}
+
+/* Tamaño pequeño para cursos */
+.flip-card.mini {
+  width: 220px;
+  height: 260px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ==== Caras de la tarjeta ==== */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
+}
+
+/* ==== Frente ==== */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  background: #f2f2f2;
+}
+
+/* ==== Reverso ==== */
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom right, #7b1818, #3d0b0b);
+  color: white;
+  padding: 1.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #5a0f0f;
+}
+
+.flip-card-back h3,
+.flip-card-back h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ==== Texto reverso ==== */
+.flip-card-back p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.flip-card-back ul {
+  margin-top: 0.7rem;
+  text-align: left;
+  font-size: 0.95rem;
+  padding-left: 1.2rem;
+}
+
+.flip-card-back ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* =========================================================
+   📱 RESPONSIVE
+   ========================================================= */
+@media (max-width: 600px) {
+  .flip-card {
+    width: 260px;
+    height: 300px;
+  }
+  .flip-card.mini {
+    width: 180px;
+    height: 220px;
   }
 }
+
+
